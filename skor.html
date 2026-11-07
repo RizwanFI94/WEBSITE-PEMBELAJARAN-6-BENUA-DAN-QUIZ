@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skor - Mengenal 6 Benua di Dunia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-bar">
+      <a class="brand" href="beranda.html">Benua Kita</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    </div>
+    <ul id="menu">
+      <li><a href="beranda.html">Beranda</a></li>
+      <li><a href="tujuan.html">Tujuan</a></li>
+      <li><a href="materi.html">Materi</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="skor.html" class="active">Skor</a></li>
+      <li><a href="profil_penyusun.html">Profil Penyusun</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero kecil">
+    <div class="hero-teks">
+      <h1>Skor</h1>
+      <p>Lihat skor terbaik dari semua permainan</p>
+    </div>
+  </header>
+
+  <article>
+    <h2>Skor Terbaik</h2>
+    <p class="tengah">Skor tiap mode permainan tersimpan di browser ini.</p>
+    <div id="skor-tabel" class="skor-grid"></div>
+
+    <h2>Riwayat Terakhir</h2>
+    <div id="skor-riwayat"></div>
+
+    <div class="aksi-tengah">
+      <a class="btn" href="quiz.html">Main Quiz</a>
+      <button type="button" class="btn abu" id="btn-hapus">Hapus Semua Skor</button>
+    </div>
+  </article>
+
+  <footer>
+    <p>© 2026 Website Pembelajaran IPAS - Mengenal 6 Benua di Dunia</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/skor.js"></script>
+</body>
+
+</html>

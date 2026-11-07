@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz - Mengenal 6 Benua di Dunia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-bar">
+      <a class="brand" href="beranda.html">Benua Kita</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    </div>
+    <ul id="menu">
+      <li><a href="beranda.html">Beranda</a></li>
+      <li><a href="tujuan.html">Tujuan</a></li>
+      <li><a href="materi.html">Materi</a></li>
+      <li><a href="quiz.html" class="active">Quiz</a></li>
+      <li><a href="skor.html">Skor</a></li>
+      <li><a href="profil_penyusun.html">Profil Penyusun</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero kecil">
+    <div class="hero-teks">
+      <h1>Quiz</h1>
+      <p>Uji pemahamanmu tentang 6 benua</p>
+    </div>
+  </header>
+
+  <article>
+    <section id="menu-quiz">
+      <h2>Pilih Mode Permainan</h2>
+      <p class="tengah">Ada <b id="jumlah-soal">100</b> soal tersimpan. Soal diacak setiap kali kamu bermain.</p>
+      <div id="skor-terbaik" class="skor-terbaik sembunyi"></div>
+      <div class="setelan">
+        <label>Jumlah soal
+          <select id="set-jumlah">
+            <option value="10" selected>10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+        </label>
+        <label>Kategori
+          <select id="set-kat">
+            <option value="semua">Semua</option>
+            <option value="negara">Negara dan benua</option>
+            <option value="ibukota">Ibukota</option>
+            <option value="tempat">Hewan dan tempat terkenal</option>
+            <option value="umum">Pengetahuan umum</option>
+          </select>
+        </label>
+        <label>Jenis pasangan (Cocokkan)
+          <select id="set-pasang">
+            <option value="ibukota">Negara - Ibukota</option>
+            <option value="benua">Negara - Benua</option>
+          </select>
+        </label>
+        <label class="centang"><input type="checkbox" id="set-waktu"> Pakai pengatur waktu (20 detik)</label>
+      </div>
+      <div class="mode-grid">
+        <button type="button" class="kartu-mode m-kuis" data-mode="kuis"><b>Kuis</b><span>Jawab pertanyaan pilihan ganda
+            satu per satu.</span></button>
+        <button type="button" class="kartu-mode m-cocok" data-mode="cocok"><b>Cocokkan</b><span>Pasangkan negara dengan
+            ibukota atau benuanya.</span></button>
+        <button type="button" class="kartu-mode m-balon" data-mode="balon"><b>Pop Balon</b><span>Pecahkan balon yang
+            berisi jawaban benar.</span></button>
+        <button type="button" class="kartu-mode m-tf" data-mode="tf"><b>Benar atau Salah</b><span>Tentukan apakah
+            jawaban yang ditawarkan tepat.</span></button>
+      </div>
+    </section>
+
+    <section id="soal" class="sembunyi">
+      <div class="atas-soal">
+        <span class="info-soal" id="info-soal"></span>
+        <span class="info-soal" id="skor-jalan"></span>
+        <span class="info-soal waktu sembunyi" id="waktu"></span>
+        <button type="button" class="btn abu kecil ke-menu">Ganti Mode</button>
+      </div>
+      <div class="progres">
+        <div id="bar"></div>
+      </div>
+      <h3 id="pertanyaan"></h3>
+      <div id="area" class="area"></div>
+      <div id="umpanbalik" class="sembunyi" role="status"></div>
+      <button type="button" class="btn sembunyi" id="btn-lanjut">Soal Berikutnya</button>
+    </section>
+
+
+    <section id="cocok" class="sembunyi">
+      <div class="atas-soal">
+        <span class="info-soal" id="info-cocok"></span>
+        <button type="button" class="btn abu kecil" id="btn-cocok-ulang">Acak Ulang</button>
+        <button type="button" class="btn abu kecil ke-menu">Ganti Mode</button>
+      </div>
+      <h3 id="judul-cocok" class="tengah"></h3>
+      <div class="cocok-grid">
+        <div id="kol-kiri" class="kolom"></div>
+        <div id="kol-kanan" class="kolom"></div>
+      </div>
+    </section>
+
+    <section id="hasil" class="hasil sembunyi">
+      <h2>Hasil</h2>
+      <div class="angka" id="angka"></div>
+      <p id="pesan"></p>
+      <div class="aksi-tengah">
+        <button type="button" class="btn" id="btn-ulang">Main Lagi</button>
+        <button type="button" class="btn abu ke-menu">Ganti Mode</button>
+        <a class="btn abu" href="materi.html">Belajar Lagi</a>
+      </div>
+      <div class="pembahasan" id="pembahasan-wrap">
+        <h2>Pembahasan</h2>
+        <div id="pembahasan"></div>
+      </div>
+    </section>
+  </article>
+
+  <footer>
+    <p>© 2026 Website Pembelajaran IPAS - Mengenal 6 Benua di Dunia</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/soal.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+
+</html>
